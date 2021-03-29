@@ -10,7 +10,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis elit lectus. Aliquam ac odio sit amet magna imperdiet.
             </p>
             <button class="contained rounded secondary">
-                <a href="">
+                <a href="/get-involved">
                     Get involved now!
                 </a>
             </button>
@@ -29,7 +29,7 @@
                   We tackle the pressing issues of our time, working with partners in thousands of communities across the UK and further afield.
               </p>
               <button class="outlined rounded secondary">
-                  <a href="">
+                  <a href="/more-about-us">
                       Learn more about us
                   </a>
               </button>
@@ -77,7 +77,7 @@
                       </h3>
                       <p>Lorem ipsum</p>
                       <button class="outlined rounded primary">
-                          <a href="">
+                          <a href="/get-online-week">
                               Read more
                           </a>
                       </button>
@@ -88,7 +88,7 @@
                       </h3>
                       <p>Lorem ipsum</p>
                       <button class="outlined rounded primary">
-                          <a href="">
+                          <a href="/learn">
                               Read more
                           </a>
                       </button>
@@ -99,7 +99,7 @@
                       </h3>
                       <p>Lorem ipsum</p>
                       <button class="outlined rounded primary">
-                          <a href="">
+                          <a href="/make-it-click">
                               Read more
                           </a>
                       </button>
@@ -110,7 +110,7 @@
                       </h3>
                       <p>Lorem ipsum</p>
                       <button class="outlined rounded primary">
-                          <a href="">
+                          <a href="/digital-you">
                               Read more
                           </a>
                       </button>
@@ -119,7 +119,7 @@
 
               <div class="call">
                   <button class="contained rounded secondary">
-                      <a href="">
+                      <a href="/more-about-us">
                           More about what we do
                       </a>
                   </button>

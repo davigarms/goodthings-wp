@@ -23,12 +23,12 @@
         </div>
         <div class="buttons">
           <button class="underlined secondary">
-            <a href="">
+            <a href="/learn">
               Learn
             </a>
           </button>
           <button class="contained primary">
-            <a href="">
+            <a href="/donate">
               Donate
             </a>
           </button>
@@ -38,7 +38,9 @@
 
     <div class="navbar">
       <div class="container">
-        <div class="logo"></div>
+        <div class="logo">
+          <a href="/"></a>
+        </div>
           <?php
             wp_nav_menu( array( 
                 'theme_location' => 'goodthings-menu', 

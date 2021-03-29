@@ -81,11 +81,18 @@ a {
 }
 
 .navbar .logo {
+  position: relative;
   background-image: url(../img/logo.png);
   width: 188px;
   height: 46px;
   display: inline-block;
   margin: 13px 0;
+}
+
+.navbar .logo a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar .menu {
