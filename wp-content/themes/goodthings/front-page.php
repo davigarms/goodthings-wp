@@ -2,7 +2,7 @@
 
       <section class="banner">
         <div class="img">
-            <img src="img/banner.jpg" alt="">
+            <img src="<?php bloginfo('template_directory');?>/img/banner.jpg" alt="">
         </div>
         <div class="container">
             <h2>Get online week 2021</h2>
@@ -19,7 +19,7 @@
 
       <section class="about">
           <div class="img">
-              <img src="img/woman.jpg" alt="">
+              <img src="<?php bloginfo('template_directory');?>/img/woman.jpg" alt="">
           </div>
           <div class="content">
               <h2>
