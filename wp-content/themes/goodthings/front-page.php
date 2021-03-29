@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 
+<?php $banner = get_field('banner'); ?>
+
       <section class="banner">
         <div class="img">
-            <img src="<?php bloginfo('template_directory');?>/img/banner.jpg" alt="">
+            <img src="<?php echo $banner['image']; ?>" alt="">
         </div>
         <div class="container">
-            <h2>Get online week 2021</h2>
+            <h2><?php echo $banner['title']; ?></h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis elit lectus. Aliquam ac odio sit amet magna imperdiet.
+            <?php echo $banner['description']; ?>
             </p>
             <button class="contained rounded secondary">
-                <a href="/get-involved">
-                    Get involved now!
+                <a href="<?php echo $banner['link']; ?>">
+                  <?php echo $banner['link_text']; ?>
                 </a>
             </button>
         </div>
