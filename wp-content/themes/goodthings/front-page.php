@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
       <section class="banner">
         <div class="img">
             <img src="img/banner.jpg" alt="">
@@ -124,3 +126,5 @@
               </div>
           </div>
       </section>
+
+<?php get_footer(); ?>
