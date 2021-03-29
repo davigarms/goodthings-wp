@@ -22,13 +22,13 @@ section {
   overflow: auto;
   background-color: #fff;
   position: relative;
-  top: 107px;
+  top: 106px;
 }
 
 header {
   position: fixed;
   z-index: 2;
-  top: 0;
+  top: 32px;
   left: calc((100vw - 1058px)/2);
 }
 
