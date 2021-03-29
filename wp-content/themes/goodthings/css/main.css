@@ -22,13 +22,13 @@ section {
   overflow: auto;
   background-color: #fff;
   position: relative;
-  top: 106px;
+  top: 107px;
 }
 
 header {
   position: fixed;
   z-index: 2;
-  top: 32px;
+  top: 0;
   left: calc((100vw - 1058px)/2);
 }
 
@@ -50,7 +50,7 @@ a {
 
 .empty {
   background-color: #eee;
-  height: calc(100vh - 138px);
+  height: calc(100vh - 107px);
   padding: 10px 50px;
 }
 
