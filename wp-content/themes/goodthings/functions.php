@@ -8,4 +8,10 @@
   }
 
   add_action('wp_enqueue_scripts', 'load_stylesheets');
+
+  function goodthings_menu() {
+    register_nav_menu('goodthings-menu',__( 'Goodthings menu' ));
+  }
+
+  add_action( 'init', 'goodthings_menu' );
 ?>
