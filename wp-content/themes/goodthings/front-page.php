@@ -1,21 +1,31 @@
 <?php get_header(); ?>
-
-<?php $banner = get_field('banner'); ?>
+<?php
+  $image = get_cfc_field('banner_panel', 'banner_image');
+  $title = get_cfc_field('banner_panel', 'banner_title');
+  $description = get_cfc_field('banner_panel', 'banner_description');
+  $link = get_cfc_field('banner_panel', 'banner_link');
+  $link_text = get_cfc_field('banner_panel', 'banner_link_text');
+  if (empty($link_text)) $link_text = 'Learn more';
+?>
 
 <section class="banner">
   <div class="img">
-    <img src="<?php echo $banner['image']; ?>" alt="">
+    <img src="<?php echo $image; ?>" alt="">
   </div>
   <div class="container">
-    <h2><?php echo $banner['title']; ?></h2>
-    <p>
-      <?php echo $banner['description']; ?>
-    </p>
-    <button class="contained rounded secondary">
-      <a href="<?php echo $banner['link']; ?>">
-        <?php echo $banner['link_text']; ?>
-      </a>
-    </button>
+    <h2><?php echo $title; ?></h2>
+    <?php if (!empty($description)) { ?>
+      <p>
+        <?php echo $description; ?>
+      </p>
+    <?php } ?>
+    <?php if (!empty($link)) { ?>
+      <button class="contained rounded secondary">
+        <a href="<?php echo $link; ?>">
+          <?php echo $link_text; ?>
+        </a>
+      </button>
+    <?php } ?>
   </div>
 </section>
 
@@ -74,17 +84,17 @@
       You might not have heard of us, but we're people behind the following impactful programmes.
     </p>
     <div class="content">
-      <?php foreach( get_cfc_meta( 'what_do_we_do' ) as $key => $value ){ ?>
+      <?php foreach( get_cfc_meta( 'what' ) as $key => $value ){ ?>
         <div class="box">
           <h3>
-            <?php the_cfc_field( 'what_do_we_do','title', false, $key ); ?>
+            <?php the_cfc_field( 'what','what_title', false, $key ); ?>
           </h3>
           <p>
-            <?php the_cfc_field( 'what_do_we_do','description', false, $key ); ?>
+            <?php the_cfc_field( 'what','what_description', false, $key ); ?>
           </p>
           <button class="outlined rounded primary">
-            <a href="<?php the_cfc_field( 'what_do_we_do','link', false, $key ); ?>">
-              <?php the_cfc_field( 'what_do_we_do','link_text', false, $key ); ?>
+            <a href="<?php the_cfc_field( 'what','what_link', false, $key ); ?>">
+              Read more
             </a>
           </button>
         </div>
