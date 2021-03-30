@@ -29,23 +29,32 @@
   </div>
 </section>
 
+<?php
+  $image = get_cfc_field('about', 'about_image');
+  $title = get_cfc_field('about', 'about_title');
+  $description = get_cfc_field('about', 'about_description');
+  $link = get_cfc_field('about', 'about_link');
+  $link_text = get_cfc_field('about', 'about_link_text');
+  if (empty($link_text)) $link_text = 'Learn more';
+?>
 <section class="about">
   <div class="img">
-    <img src="<?php bloginfo('template_directory');?>/img/woman.jpg" alt="">
+    <img src="<?php echo $image; ?>" alt="">
   </div>
   <div class="content">
     <h2>
-      We are a social change charity, helping people to improve their lives through digital.
+      <?php echo $title; ?>
     </h2>
     <p>
-      We tackle the pressing issues of our time, working with partners in thousands of communities across the UK and
-      further afield.
+      <?php echo $description; ?>
     </p>
-    <button class="outlined rounded secondary">
-      <a href="/more-about-us">
-        Learn more about us
-      </a>
-    </button>
+    <?php if (!empty($link)) { ?>
+      <button class="outlined rounded secondary">
+        <a href="<?php echo $link; ?>">
+        <?php echo $link_text; ?>
+        </a>
+      </button>
+    <?php } ?>
   </div>
 </section>
 
