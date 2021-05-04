@@ -3,7 +3,7 @@ Theme Name: Goodthings
 Author: Davi Garms
  */
 
- /* general */
+/* elements */
 
 * {
   box-sizing: border-box;
@@ -37,15 +37,15 @@ header {
   left: calc((100vw - 1058px)/2);
 }
 
-.container {
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-}
-
 h2,
 h3 {
   font-weight: 600;
+  margin-bottom: 21px;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.4;
 }
 
 a {
@@ -53,70 +53,73 @@ a {
   color: inherit;
 }
 
-.empty {
-  background-color: #eee;
-  height: calc(100vh - 107px);
-  padding: 10px 50px;
+ul {
+  list-style-type: none;
+  list-style: none;
+  list-style-image: none;
 }
 
-/* sections */
+select {
+  border: none;
+}
 
+button {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+}
+  button a {
+    padding-top: inherit;
+    padding-bottom: inherit;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+ /* global  */
+.container {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* components */
 .topbar {
-  border-bottom: 1px solid #ccc;
   height: 29px;
-}
-
-.topbar .search {
-  display: inline-block;
 }
 
 .topbar .search input {
   height: 27px;
-  border: none;
-}
-
-.topbar .buttons {
-  float: right;
 }
 
 .topbar .buttons button {
-  float: left;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
 .navbar .logo {
   position: relative;
-  background-image: url(./img/logo.png);
+  background-image: url(../img/logo.png);
   width: 188px;
   height: 46px;
-  display: inline-block;
   margin: 13px 0;
 }
+  .navbar .logo a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 
-.navbar .logo a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.navbar .menu {
-  float: right;
-}
-
-.navbar .menu ul {
-  list-style-type: none;
-  list-style: none;
-  list-style-image: none;
-  display: flex;
-  height: 71px;
+.navbar ul {
+  height: 77px;
   padding: 0;
   margin: 0;
 }
 
-.navbar .menu li {
-  align-self: center;
-  display: inline-block;
+.navbar ul li {
   margin: 0 8px;
   font-size: 13px;
   font-weight: 600;
@@ -124,11 +127,6 @@ a {
 
 .banner .img {
   line-height: 0;
-}
-
-.banner .img img {
-  width: 100%;
-  display: block;
 }
 
 .banner .container {
@@ -139,17 +137,13 @@ a {
 }
 
 .banner .container h2 {
-  color: #fff;
   font-size: 56px;
-  padding: 10px 15px 15px;
-  background-color: #497c8f;
-  margin: 0;
+  padding: 9px 15px 14px;
+  margin-bottom: 0;
 }
 
 .banner .container p {
   margin: 16px 0;
-  color: #497c8f;
-  background-color: #fff;
   font-weight: 500;
   font-size: 16px;
   padding: 18px 20px;
@@ -162,11 +156,6 @@ a {
   }
 }
 
-.about {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .about div {
   flex: 1 1 360px;
   height: 265px;
@@ -175,9 +164,7 @@ a {
 }
 
 .about .content {
-  color: #fff;
   padding: 0 30px;
-  background-color: #478175;
 }
 
 .about .content h2 {
@@ -204,7 +191,6 @@ a {
 }
 
 .how h2 {
-  margin-top: 0;
   font-size: 26px;
 }
 
@@ -213,16 +199,12 @@ a {
 }
 
 .how .howform {
-  text-align: center;
   font-size: 23px;
   margin: 40px 0 0;
 }
 
 .how .howform select {
-  border: none;
-  border-bottom: 2px solid #497c8f;
   font-size: 23px;
-  color: #497c8f;
   margin: 0 4px;
 }
 
@@ -239,34 +221,18 @@ a {
   }
 
 .what {
-  background-color: #487c8f;
   padding: 48px 0;
 }
 
-.what h2 {
-  margin-top: 0;
-  color: #fff;
-}
-
 .what p {
-  color: #fff;
   font-size: 13px;
   margin-bottom: 30px;
 }
 
-.what .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-}
-
 .what .content .box {
-  background-color: #fff;
   flex: 0 1 200px;
   margin-bottom: 45px;
   padding: 20px 0 25px;
-  text-align: center;
 }
 
 .what .content .box h3 {
@@ -274,40 +240,118 @@ a {
 }
 
 .what .content .box p {
-  color: #222;
   font-size: initial;
   margin-bottom: 16px;
 }
 
-.what .call {
+
+
+
+
+
+
+
+/* float */
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+/* display */
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+
+/* alignment */
+.center {
   text-align: center;
+} 
+
+.align-items-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.flex-wrap {
+  flex: wrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 
-/* buttons */
-button {
-  position: relative;
-  background: none;
+/* border */
+.no-border { 
   border: none;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 0;
-  padding-right: 0;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 13px;
 }
-  button a {
-    padding-top: inherit;
-    padding-bottom: inherit;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 
-button.rounded {
+.border-left {
+  border-left: 1px #ccc solid;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid #ccc;  
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid #ccc;
+}
+
+.rounded {
   border-radius: 20px;
 }
 
+/* color */
+.bg-white {
+  background-color: #fff;
+  color: #333;
+}
+
+.bg-primary {
+  background-color: #497c8f;
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: #478175;
+  color: #fff;
+}
+
+.highlight {
+  color: #497c8f;
+  border-color: #497c8f!important;
+}
+
+.white {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* buttons */
 button.contained {
   background-color: #ccc;
   color: #222222;
@@ -337,10 +381,6 @@ button.outlined.secondary {
   color: #fff;
 }
 
-button.underlined {
-  border-left: 1px #ccc solid;
-}
-
 button.underlined:after {
   content: "";
   background-color: #ccc;
@@ -355,3 +395,6 @@ button.underlined.secondary:after {
   background-color: #3b7e71;
   color: #3b7e71;
 }
+
+
+

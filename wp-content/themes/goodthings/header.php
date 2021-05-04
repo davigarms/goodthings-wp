@@ -14,21 +14,26 @@
 
 <body>
   <header>
-    <div class="topbar">
+    <div class="topbar border-bottom-1">
       <div class="container">
-        <div class="search">
+        <div class="search inline-block">
           <form>
-            <input type="text" placeholder="Search" name="search">
+            <input
+              class="no-border"
+              type="text"
+              placeholder="Search"
+              name="search"
+            />
           </form>
         </div>
-        <div class="buttons">
-          <button class="underlined secondary">
-            <a href="/learn">
+        <div class="buttons float-right">
+          <button class="float-left border-left underlined secondary">
+            <a href="">
               Learn
             </a>
           </button>
-          <button class="contained primary">
-            <a href="/donate">
+          <button class="float-left contained primary">
+            <a href="">
               Donate
             </a>
           </button>
@@ -38,14 +43,13 @@
 
     <div class="navbar">
       <div class="container">
-        <div class="logo">
-          <a href="/"></a>
-        </div>
-          <?php
-            wp_nav_menu( array( 
-                'theme_location' => 'goodthings-menu', 
-                'container_class' => 'menu' ) ); 
-          ?>
+        <div class="logo inline-block"></div>
+        <?php
+          wp_nav_menu( array( 
+              'theme_location' => 'goodthings-menu', 
+              'container' => '',
+              'menu_class' => 'float-right flex align-items-center' ) ); 
+        ?>
       </div>
     </div>
   </header>

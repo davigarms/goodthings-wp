@@ -1,10 +1,19 @@
-# WordPress
+## GoodThings Foundation WordPress theme
+
+![Home](screenshot-1.png)
+
+A WordPress theme for the charity sector that uses custom fields for personalisation.
+
+Theme files are located under *wp-content/themes/goodthings* directory.
+
+**[Visit website now](https://dev-goodthings-foundation.pantheonsite.io/)**
+
+## Getting Started
 
 This is a WordPress repository configured to run on the [Pantheon platform](https://pantheon.io).
 
 Pantheon is website platform optimized and configured to run high performance sites with an amazing developer workflow. There is built-in support for features such as Varnish, Redis, Apache Solr, New Relic, Nginx, PHP-FPM, MySQL, PhantomJS and more. 
 
-## Getting Started
 
 ### 1. Spin-up a site
 
@@ -26,7 +35,8 @@ We will post more information about how this works but we recommend developers t
 
 If you would like to keep a separate set of configuration for local development, you can use a file called `wp-config-local.php`, which is already in our .gitignore file.
 
-### 4. Enjoy!
+### 4. Activate plugin
 
-![alt](http://i.imgur.com/fzIeQBP.png, '')
+Activate *WCK - Custom Fields and Custom Post Types Creator* plugin.
+
 

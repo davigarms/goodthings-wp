@@ -13,9 +13,9 @@
     <img src="<?php echo $image; ?>" alt="">
   </div>
   <div class="container">
-    <h2><?php echo $title; ?></h2>
+    <h2 class="bg-primary"><?php echo $title; ?></h2>
     <?php if (!empty($description)) { ?>
-      <p>
+      <p class="bg-white highlight">
         <?php echo $description; ?>
       </p>
     <?php } ?>
@@ -37,11 +37,11 @@
   $link_text = get_cfc_field('about', 'about_link_text');
   if (empty($link_text)) $link_text = 'Learn more';
 ?>
-<section class="about">
+<section class="about flex wrap">
   <div class="img">
     <img src="<?php echo $image; ?>" alt="">
   </div>
-  <div class="content">
+  <div class="content bg-secondary">
     <h2>
       <?php echo $title; ?>
     </h2>
@@ -66,13 +66,13 @@
     <p>
       Let us know who you are and what you're looking for, and we'll help get you to the right place.
     </p>
-    <form id="howform" class="howform">
+    <form id="howform" class="howform center">
       <label for="user">I am</label>
-      <select name="user" id="name" form="howform">
+      <select class="border-bottom-2 highlight" name="user" id="name" form="howform">
         <option value="individual">an Individual</option>
       </select>
       <label for="target">and I want to</label>
-      <select name="target" id="target" form="howform">
+      <select class="border-bottom-2 highlight" name="target" id="target" form="howform">
         <option value="learn">learn</option>
       </select>
       <button class="contained rounded primary">
@@ -84,7 +84,7 @@
   </div>
 </section>
 
-<section class="what">
+<section class="what bg-primary">
   <div class="container">
     <h2>
       What do we do?
@@ -92,9 +92,9 @@
     <p>
       You might not have heard of us, but we're people behind the following impactful programmes.
     </p>
-    <div class="content">
+    <div class="content flex wrap space-between">
       <?php foreach( get_cfc_meta( 'what' ) as $key => $value ){ ?>
-        <div class="box">
+        <div class="box bg-white center">
           <h3>
             <?php the_cfc_field( 'what','what_title', false, $key ); ?>
           </h3>
@@ -110,7 +110,7 @@
       <?php }  ?>
     </div>
 
-    <div class="call">
+    <div class="call center">
       <button class="contained rounded secondary">
         <a href="/more-about-us">
           More about what we do

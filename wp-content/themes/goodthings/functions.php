@@ -1,9 +1,12 @@
 <?php
   function load_stylesheets() {
-    wp_register_style('styles', get_template_directory_uri() . '/style.css', array(), 1, 'all');
-    wp_enqueue_style('styles');
+    wp_register_style('reset', get_template_directory_uri() . '/css/reset.css', array(), 1, 'all');
+    wp_enqueue_style('reset');
 
-    wp_register_style('custom', get_template_directory_uri() . '/custom.css', array(), 1, 'all');
+    wp_register_style('main', get_template_directory_uri() . '/css/main.css', array(), 1, 'all');
+    wp_enqueue_style('main');
+
+    wp_register_style('custom', get_template_directory_uri() . '/css/custom.css', array(), 1, 'all');
     wp_enqueue_style('custom');
   }
 
