@@ -8,19 +8,21 @@
   if (empty($link_text)) $link_text = 'Learn more';
 ?>
 
-<section class="banner">
-  <div class="img">
+<section class="hero">
+  <div class="hero__img">
     <img src="<?php echo $image; ?>" alt="">
   </div>
-  <div class="container">
-    <h2 class="bg-primary"><?php echo $title; ?></h2>
+  <div class="hero__text">
+    <h3 class="hero__title txt-bold txt-xlg bgc-primary">
+      <?php echo $title; ?>
+    </h3>
     <?php if (!empty($description)) { ?>
-      <p class="bg-white highlight">
+      <h4 class="hero__description bgc-white fgc-highlight">
         <?php echo $description; ?>
-      </p>
+    </h4>
     <?php } ?>
     <?php if (!empty($link)) { ?>
-      <button class="contained rounded secondary">
+      <button class="rounded btn-secondary">
         <a href="<?php echo $link; ?>">
           <?php echo $link_text; ?>
         </a>
@@ -38,18 +40,18 @@
   if (empty($link_text)) $link_text = 'Learn more';
 ?>
 <section class="about flex wrap">
-  <div class="img">
+  <div class="about__img">
     <img src="<?php echo $image; ?>" alt="">
   </div>
-  <div class="content bg-secondary">
-    <h2>
+  <div class="about__text bgc-secondary">
+    <h2 class="about__title">
       <?php echo $title; ?>
     </h2>
-    <p>
+    <p class="about__description">
       <?php echo $description; ?>
     </p>
     <?php if (!empty($link)) { ?>
-      <button class="outlined rounded secondary">
+      <button class="rounded btn-outlined btn-secondary">
         <a href="<?php echo $link; ?>">
         <?php echo $link_text; ?>
         </a>
@@ -60,22 +62,22 @@
 
 <section class="how">
   <div class="container">
-    <h2>
+    <h2 class="txt-lg">
       How can we help you?
     </h2>
     <p>
       Let us know who you are and what you're looking for, and we'll help get you to the right place.
     </p>
-    <form id="howform" class="howform center">
+    <form id="how__form" class="how__form txt-md center">
       <label for="user">I am</label>
-      <select class="border-bottom-2 highlight" name="user" id="name" form="howform">
+      <select class="how__select txt-md border-bottom-2 fgc-highlight" name="user" id="name" form="how__form">
         <option value="individual">an Individual</option>
       </select>
       <label for="target">and I want to</label>
-      <select class="border-bottom-2 highlight" name="target" id="target" form="howform">
+      <select class="how__select txt-md border-bottom-2 fgc-highlight" name="target" id="target" form="how__form">
         <option value="learn">learn</option>
       </select>
-      <button class="contained rounded primary">
+      <button class="how__button rounded btn-primary">
         <a href="">
           Start now
         </a>
@@ -84,34 +86,34 @@
   </div>
 </section>
 
-<section class="what bg-primary">
+<section class="what bgc-primary">
   <div class="container">
     <h2>
       What do we do?
     </h2>
-    <p>
+    <h3 class="what__description txt-sm">
       You might not have heard of us, but we're people behind the following impactful programmes.
-    </p>
-    <div class="content flex wrap space-between">
+    </h3>
+    <ul class="what__cards flex wrap space-between">
       <?php foreach( get_cfc_meta( 'what' ) as $key => $value ){ ?>
-        <div class="box bg-white center">
-          <h3>
+        <li class="what__card bgc-white center">
+          <h4 class="what__card-title txt-bold">
             <?php the_cfc_field( 'what','what_title', false, $key ); ?>
-          </h3>
-          <p>
+          </h4>
+          <p class="what__card-description">
             <?php the_cfc_field( 'what','what_description', false, $key ); ?>
           </p>
-          <button class="outlined rounded primary">
+          <button class="rounded btn-outlined btn-primary">
             <a href="<?php the_cfc_field( 'what','what_link', false, $key ); ?>">
               Read more
             </a>
           </button>
-        </div>
+      </li>
       <?php }  ?>
     </div>
 
-    <div class="call center">
-      <button class="contained rounded secondary">
+    <div class="center">
+      <button class="rounded btn-secondary">
         <a href="/more-about-us">
           More about what we do
         </a>

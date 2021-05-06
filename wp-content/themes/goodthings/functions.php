@@ -18,6 +18,14 @@
 
   add_action( 'init', 'goodthings_menu' );
 
+  // Add menuitem BEM class
+  add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+  function special_nav_class($classes, $item){
+      $classes[] = 'navbar__menuitem';
+      return $classes;
+  }
+
   // Our custom post type function
   function create_posttype() {
   
